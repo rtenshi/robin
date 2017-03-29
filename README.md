@@ -1,3 +1,20 @@
+Apache config
+=============
+<VirtualHost *:80>
+	Servername robin.local
+	DocumentRoot /home/raffael/PhpstormProjects/robin/web
+	ErrorLog ${APACHE_LOG_DIR}/error.restapi.log
+	CustomLog ${APACHE_LOG_DIR}/access.restapi.log combined
+	SetEnv YII_ENV_DEV true
+	<Directory /home/raffael/PhpstormProjects/robin/web>
+                Options Indexes FollowSymLinks MultiViews
+                AllowOverride All
+                Order allow,deny
+                allow from all
+	</Directory>
+</VirtualHost>
+
+
 Yii 2 Basic Project Template
 ============================
 
